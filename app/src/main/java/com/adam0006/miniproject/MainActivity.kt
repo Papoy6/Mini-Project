@@ -69,8 +69,6 @@ fun MainScreen() {
         ) {
             Spacer(modifier = Modifier.height(20.dp))
 
-            // Pastikan ada file ic_money di res/drawable
-            // Jika belum ada, gantiic_money dengan ic_launcher_foreground (bawaan android)
             Image(
                 painter = painterResource(id = R.drawable.ic_money),
                 contentDescription = "Logo Tabungan",
@@ -106,7 +104,6 @@ fun MainScreen() {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // --- TOMBOL HITUNG ---
             Button(
                 onClick = {
                     val harga = hargaInput.toDoubleOrNull() ?: 0.0
@@ -130,7 +127,6 @@ fun MainScreen() {
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            // --- TAMPILAN HASIL ---
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(

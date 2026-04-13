@@ -1,8 +1,8 @@
 package com.adam0006.miniproject
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn // Tambahkan ini
-import androidx.compose.foundation.lazy.items // Tambahkan ini
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
@@ -20,7 +20,6 @@ fun HistoryScreen(navController: NavHostController, historyData: List<String>) {
             TopAppBar(
                 title = { Text("Riwayat Perhitungan") },
                 navigationIcon = {
-                    // Sesuai Task 3.4 di modul, gunakan popBackStack
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -41,7 +40,6 @@ fun HistoryScreen(navController: NavHostController, historyData: List<String>) {
                 Text("Belum ada riwayat.")
             }
         } else {
-            // LazyColumn untuk menampilkan list secara efisien
             LazyColumn(
                 modifier = Modifier
                     .padding(innerPadding)

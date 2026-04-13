@@ -12,7 +12,6 @@ import com.adam0006.miniproject.HistoryScreen
 
 @Composable
 fun SetupNavGraph(navController: NavHostController = rememberNavController()) {
-    // List untuk menyimpan riwayat selama aplikasi berjalan (Cara Cepat)
     val historyList = remember { mutableStateListOf<String>() }
 
     NavHost(

@@ -24,7 +24,6 @@ import androidx.navigation.NavHostController
 import com.adam0006.miniproject.R
 import com.adam0006.miniproject.navigation.Screen
 
-// Fungsi Share menggunakan Intent Implisit [cite: 389]
 private fun shareData(context: Context, message: String) {
     val shareIntent = Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
@@ -42,7 +41,6 @@ fun MainScreen(
     onHitung: (String) -> Unit
 ) {
     val context = LocalContext.current
-    // Pakai rememberSaveable biar input gak ilang pas balik dari history
     var hargaInput by rememberSaveable { mutableStateOf("") }
     var tabunganInput by rememberSaveable { mutableStateOf("") }
     var hasilHari by rememberSaveable { mutableStateOf("0") }
@@ -132,7 +130,6 @@ fun MainScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Tombol Bagikan [cite: 425]
                 Button(
                     onClick = {
                         val pesan = "Target Rp $hargaInput, nabung Rp $tabunganInput/hari. Lunas dalam $hasilHari hari!"
